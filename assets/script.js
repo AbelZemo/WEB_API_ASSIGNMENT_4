@@ -67,14 +67,14 @@ function optionSelected(answer) {
         console.log("Answer is Correct");
         const response = document.querySelector("#response");
         response.innerHTML = '</br> <div id="response" style="display:flex; gap:20px; color:green; border-bottom: 5px solid green; margin-top: 5px; width: 90%;" ><span>Correct!</span></div>';
-        setTimeout(nextQuestion, 5000)
+        setTimeout(nextQuestion, 1000)
         score += 1
 
     } else {
         console.log("Answer is Wrong");
         const response = document.querySelector("#response");
         response.innerHTML = '</br> <div id="response" style="display:flex; gap:20px; color:red; border-bottom: 5px solid red; margin-top: 5px; width: 90%;"><span>Wrong!  </span></div>';
-        setTimeout(nextQuestion, 5000)
+        setTimeout(nextQuestion, 1000)
         counter -= 5
     }
 }
