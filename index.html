@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web_API_Code_Quiz_Challenge_4</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+
+  <body>
+    <header
+      style="
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      "
+    >
+      <div>
+        <a
+          href="Store_High_Score.html"
+          style="
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: 500;
+            padding: 5px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          "
+          >View Highscores</a
+        >
+      </div>
+      <div id="time-rem">
+        <span>Time Left: 60</span>
+      </div>
+    </header>
+    <div class="container position-relative">
+
+
+      <div
+        id="rules"
+        class="info-box mt-5"
+        style="margin: auto; width: 50%; padding: 10px"
+      >
+        <!--this section indicates the rule of the exam game -->
+        <div class="info-title">Coding Quiz Rules</div>
+        <div class="info-list">
+          <div class="info">
+            1. You only have <span>60 seconds</span> to finish 10 questions.
+          </div>
+          <div class="info">2. You cannot go back to a previous question.</div>
+          <div class="info">
+            3. If you answer a question incorrectly, you are penalized 10
+            seconds.
+          </div>
+        </div>
+        <div class="buttons">
+          <!-- if user clicks exit quiz the user will be redirected to exit html page -->
+          <button class="quit btn btn-primary btn-sm">
+            <a href="exit.html" class="highscores float-end">Exit Quiz</a>
+          </button>
+          <!-- is user clicks start the content of the page will start the exam -->
+          <button class="restart btn btn-primary btn-sm">start</button>
+        </div>
+      </div>
+      <section
+        id="questions"
+        class="hide row quiz-box mt-5"
+        style="margin: auto; width: 50%; padding: 10px"
+      >
+        <h1 class="que-text">
+          <!-- the question come here from the question js file -->
+          <span></span>
+        </h1>
+        <!-- list of choices come here from the question js file-->
+        <div id="choices" class="flex-direction">
+          <div class="option"><span></span></div>
+          <div class="option"><span></span></div>
+          <div class="option"><span></span></div>
+          <div class="option"><span></span></div>
+        </div>
+        <!-- this shows the response  -->
+        <div id="response">
+          <!-- the span says correct or wrong based on user's answer. if the user answer was right it says correct. if not it says wrong -->
+          <span> </span>
+        </div>
+      </section>
+      <div
+        id="quiz-end"
+        class="hide text-center p-5"
+        style="margin: auto; width: 50%; padding: 10px"
+      >
+        <!-- end of quiz and show result to user -->
+        <div>
+          <h1>End of Quiz!</h1>
+          <!-- this h3 shows total result from the given questions -->
+          <h3 class="score"></h3>
+
+          <h2>Enter Initials:</h2>
+          <!-- user will be asked to enter initials  -->
+          <input type="text" id="initials" />
+          <!-- user will be asked to submit the result and to save in the local storage -->
+          <button id="save-score">Submit</button>
+        </div>
+      </div>
+    </div>
+    <!-- this js file contains list of questions  -->
+    <script src="assets/questions.js"></script>
+    <!-- this js file contains the code game -->
+    <script src="assets/script.js"></script>
+  </body>
+</html>

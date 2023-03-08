@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show High Scores!</title>
+    <!-- link the corresponding css -->
+    <link rel="stylesheet" href="assets/store_high_score.css" />
+  </head>
+
+  <body>
+    <!-- the header part of the page -->
+    <header class="header">
+      <div class="title">
+        <p>Coding Quiz Game</p>
+        <a href="index.html">Go Back</a>
+      </div>
+    </header>
+
+    <div class="container" style="width: auto">
+      <div class="setting">
+        <h1>High Scores:</h1>
+        <!-- when the user clicks the clear button the high scored values that are stored on the local storage will be deleted -->
+        <button id="clear">clear</button>
+      </div>
+      <!-- the stored values will be displayed here -->
+      <div id="store_high_scores_text"></div>
+    </div>
+    <!-- I have linked the corresponding store_high_scores js file  -->
+    <script src="assets/store_high_scores.js"></script>
+  </body>
+</html>
